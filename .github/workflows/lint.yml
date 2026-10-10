@@ -20,7 +20,8 @@ jobs:
           severity: warning
 
   powershell:
-    runs-on: windows-latest
+    # pwsh ships on the Linux runner image; parsing needs no Windows.
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: PowerShell parse check
